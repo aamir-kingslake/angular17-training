@@ -1,0 +1,27 @@
+<p>You are in the Layout preparation page</p>
+
+<button><a routerLink="/home">Home</a></button>
+<a routerLink="/home"><button>Home</button></a>
+<a href="/home"><button>Home</button></a>
+
+<kendo-grid
+    [data]="gridItems | async"
+    [pageSize]="pageSize"
+    [skip]="skip"
+    [pageable]="true"
+    (pageChange)="pageChange($event)"
+    [sortable]="true"
+    [sort]="sortDescriptor"
+    (sortChange)="handleSortChange($event)"
+    [height]="400"
+    >
+    <kendo-grid-column field="ProductID" title="ID"></kendo-grid-column>
+    <kendo-grid-column field="ProductName" title="Product Name"></kendo-grid-column>
+    <kendo-grid-column field="Category.CategoryName" title="Category"></kendo-grid-column>
+    <kendo-grid-column field="UnitPrice" title="Unit Price" format="{0:c}"></kendo-grid-column>
+    <kendo-grid-column field="Discontinued" filter="boolean">
+        <ng-template kendoGridCellTemplate let-dataItem>
+            <input type="checkbox" [checked]="dataItem.Discontinued" disabled />
+        </ng-template>
+    </kendo-grid-column>
+</kendo-grid>
