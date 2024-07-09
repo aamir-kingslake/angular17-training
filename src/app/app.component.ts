@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
-import { GridModule } from "@progress/kendo-angular-grid";
 
 @Component({
   selector: 'app-root',
@@ -11,5 +10,5 @@ import { GridModule } from "@progress/kendo-angular-grid";
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'lb-layout-preparation';
+  title = 'angular17-training';
 }

@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'lb-layout-preparation' title`, () => {
+  it(`should have the 'angular17-training' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('lb-layout-preparation');
+    expect(app.title).toEqual('angular17-training');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, lb-layout-preparation');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, angular17-training');
   });
 });
