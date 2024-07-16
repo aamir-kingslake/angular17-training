@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { RepositoryService } from '../../services/repository.service';
+import { MaterialModule } from '../../_module/material/material.module';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterLink],
+  imports: [RouterLink, MaterialModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
@@ -15,7 +16,7 @@ export class HomeComponent {
   posts: any[] = [];
 
   ngOnInit(): void {
-    this.loadInitialData();
+    // this.loadInitialData();
     // throw new Error('Method not implemented.');
   }
 

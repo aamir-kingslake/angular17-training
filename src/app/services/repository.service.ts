@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
@@ -7,7 +8,7 @@ import { Injectable } from '@angular/core';
 export class RepositoryService {
   constructor(private http: HttpClient) {}
 
-  getAllpost(){
+  getAllpost(): Observable<any>{
     return this.http.get('http://localhost:3000/posts');
   }
 }

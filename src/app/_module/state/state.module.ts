@@ -4,6 +4,6 @@ import { CommonModule } from '@angular/common';
 @NgModule({
   declarations: [],
   imports: [],
-  exports: [],
+  exports: [CommonModule],
 })
-export class KendoModule {}
+export class StateModule {}
